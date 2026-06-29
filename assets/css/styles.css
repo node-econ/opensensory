@@ -1,0 +1,109 @@
+:root {
+  --ea-green: #2f6f4e;
+  --ea-green-dark: #234f39;
+  --ea-gold: #c9a227;
+  --ea-sand: #f6f4ee;
+  --ea-ink: #1f2a24;
+}
+
+body {
+  color: var(--ea-ink);
+  background-color: #ffffff;
+}
+
+/* Navigation */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar-dark {
+  background-color: var(--ea-green-dark);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--ea-green) 0%, var(--ea-green-dark) 100%);
+  color: #ffffff;
+  padding: 5rem 0 4rem;
+}
+
+.hero .lead {
+  max-width: 48rem;
+  opacity: 0.95;
+}
+
+/* Section headings */
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ea-gold);
+}
+
+/* Concept cards */
+.concept-card {
+  border: 1px solid #e6e3da;
+  border-radius: 0.75rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  height: 100%;
+}
+
+.concept-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(35, 79, 57, 0.12);
+}
+
+.concept-card .card-title {
+  color: var(--ea-green-dark);
+  font-weight: 700;
+}
+
+.btn-ea {
+  background-color: var(--ea-green);
+  border-color: var(--ea-green);
+  color: #ffffff;
+}
+
+.btn-ea:hover {
+  background-color: var(--ea-green-dark);
+  border-color: var(--ea-green-dark);
+  color: #ffffff;
+}
+
+/* Detail pages */
+.detail-header {
+  background-color: var(--ea-sand);
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid #e6e3da;
+}
+
+.detail-body {
+  padding: 3rem 0 4rem;
+}
+
+.detail-body h2 {
+  color: var(--ea-green-dark);
+  margin-top: 2rem;
+  font-size: 1.35rem;
+}
+
+.detail-body .meta-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ea-gold);
+}
+
+footer {
+  background-color: var(--ea-green-dark);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #ffffff;
+}
