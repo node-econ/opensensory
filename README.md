@@ -39,6 +39,35 @@ python3 -m http.server 8000
 
 Then visit http://localhost:8000.
 
+## Push updates to GitHub
+
+The live site is served from the `main` branch of
+[`node-econ/opensensory`](https://github.com/node-econ/opensensory) via GitHub Pages
+at [opensensory.net](https://opensensory.net/).
+
+After editing files locally:
+
+```bash
+# See what changed
+git status
+
+# Stage everything (or list specific files instead of ".")
+git add .
+
+# Commit with a short message describing the change
+git commit -m "Describe your update here"
+
+# Push to GitHub — Pages usually updates within a minute or two
+git push origin main
+```
+
+Notes:
+
+- Do **not** commit `.env` (it is listed in `.gitignore` and contains credentials).
+- Images belong in `assets/images/` and are referenced from pages as
+  `../assets/images/your-file.jpg`.
+- After pushing, hard-refresh the browser if you do not see the change right away.
+
 ## Publish with GitHub Pages
 
 1. Create a repository on GitHub and push this folder:

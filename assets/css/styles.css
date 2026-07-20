@@ -97,6 +97,18 @@ body {
   color: var(--ea-gold);
 }
 
+.detail-figure {
+  margin: 0;
+}
+
+.detail-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 22rem;
+}
+
 footer {
   background-color: var(--ea-green-dark);
   color: rgba(255, 255, 255, 0.85);
