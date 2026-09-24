@@ -15,7 +15,6 @@
 
 
 ## California Olive Oil Industry Strategic Landscape
-
 **The audience**: Millers, farmland investors, lenders and crop insurers, grocery retailers
 
 **The idea**: A digitally-delivered study, with data and narrative components, including financial models, updated statistics, and forecasting tools 

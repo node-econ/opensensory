@@ -1,37 +1,41 @@
-# Open Sensory, LLC — What We're Working On
+# Open Sensory
 
-A simple static Bootstrap site presenting strategic concepts for discussion with
-agricultural industry leaders. Built as plain HTML + Bootstrap (via CDN), so it
-runs on GitHub Pages with no build step.
+Static Bootstrap site for Open Sensory. Hearing technology is the primary
+narrative; agriculture technology stays live under `/agriculture/` and in the
+footer only. Built as plain HTML + Bootstrap (via CDN) for GitHub Pages.
+
+The entire site uses `noindex, nofollow` and is not intended for search indexing.
 
 ## Structure
 
 ```
 .
-├── index.html                     # Landing page with one-sentence concept cards
+├── index.html                 # Home — "Read the Room" (hearing tech)
+├── about.html                 # Our story
+├── contact.html               # General inquiry
+├── agriculture/
+│   ├── index.html             # Agriculture Technology concept cards
+│   └── pages/                 # Concept detail pages
+│       ├── ag-tech-benchmarking.html
+│       ├── olive-oil-landscape.html
+│       ├── succession-planning.html
+│       ├── crop-hedging.html
+│       ├── crop-protection-upheaval.html
+│       └── crop-alerts.html
 ├── assets/
-│   └── css/
-│       └── styles.css             # Shared styling
-├── pages/                         # One detail page per concept
-│   ├── ag-tech-benchmarking.html
-│   ├── olive-oil-landscape.html
-│   ├── succession-planning.html
-│   ├── crop-hedging.html
-│   ├── crop-protection-upheaval.html
-│   └── crop-alerts.html
-└── Concepts_2026.md               # Source notes (not published)
+│   ├── css/styles.css
+│   └── images/
+└── Concepts_2026.md           # Source notes (not published)
 ```
 
 ## Editing content
 
-- **Card summaries** live in `index.html` (one `<p class="card-text">` per card).
-- **Full descriptions** live in the matching file under `pages/`.
-- To add a new concept: copy an existing file in `pages/`, edit it, then add a
-  new card linking to it in `index.html`.
+- **Home / About / Contact** copy lives in the matching root HTML files.
+- **Agriculture cards** live in `agriculture/index.html`.
+- **Agriculture detail pages** live under `agriculture/pages/`.
+- Primary nav: Home · About · Contact. Agriculture is footer-only.
 
 ## Preview locally
-
-Open `index.html` directly in a browser, or run a local server:
 
 ```bash
 python3 -m http.server 8000
@@ -48,44 +52,24 @@ at [opensensory.net](https://opensensory.net/).
 After editing files locally:
 
 ```bash
-# See what changed
 git status
-
-# Stage everything (or list specific files instead of ".")
 git add .
-
-# Commit with a short message describing the change
 git commit -m "Describe your update here"
-
-# Push to GitHub — Pages usually updates within a minute or two
 git push origin main
 ```
 
 Notes:
 
-- Do **not** commit `.env` (it is listed in `.gitignore` and contains credentials).
-- Images belong in `assets/images/` and are referenced from pages as
-  `../assets/images/your-file.jpg`.
+- Do **not** commit `.env` (listed in `.gitignore`; contains credentials).
+- Images belong in `assets/images/`. From agriculture detail pages, reference as
+  `../../assets/images/your-file.jpg`.
 - After pushing, hard-refresh the browser if you do not see the change right away.
 
 ## Publish with GitHub Pages
 
-1. Create a repository on GitHub and push this folder:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial concepts site"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<repo>.git
-   git push -u origin main
-   ```
-
-2. On GitHub, go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-4. Choose branch **main** and folder **/ (root)**, then **Save**.
-5. After a minute, your site is live at
-   `https://<your-username>.github.io/<repo>/`.
+1. Push `main` to GitHub.
+2. On GitHub: **Settings → Pages** → Deploy from branch **main** / **(root)**.
+3. Custom domain: `opensensory.net` (see repo `CNAME`).
 
 No Jekyll or build configuration is required. If you ever want to disable
 Jekyll processing, add an empty `.nojekyll` file at the root.
